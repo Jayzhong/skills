@@ -1,0 +1,56 @@
+{
+    "name": "wechat-md",
+    "version": "1.0.0",
+    "description": "Convert Markdown to WeChat Official Accounts-compatible HTML with customizable themes",
+    "type": "module",
+    "bin": {
+        "wechat-md": "./dist/cli.js"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/cli.ts",
+        "test": "vitest",
+        "test:run": "vitest run",
+        "lint": "tsc --noEmit",
+        "prepublishOnly": "pnpm build"
+    },
+    "keywords": [
+        "markdown",
+        "wechat",
+        "weixin",
+        "html",
+        "converter",
+        "syntax-highlighting"
+    ],
+    "author": "",
+    "license": "MIT",
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "commander": "^13.0.0",
+        "inquirer": "^12.3.0",
+        "rehype-stringify": "^10.0.1",
+        "remark-frontmatter": "^5.0.0",
+        "remark-gfm": "^4.0.0",
+        "remark-parse": "^11.0.0",
+        "remark-rehype": "^11.1.1",
+        "shiki": "^3.0.0",
+        "unified": "^11.0.5",
+        "yaml": "^2.7.0"
+    },
+    "devDependencies": {
+        "@types/hast": "^3.0.4",
+        "@types/node": "^22.10.5",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.3",
+        "vitest": "^2.1.8"
+    }
+}
