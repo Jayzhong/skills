@@ -1,0 +1,31 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4CAF50', 'secondaryColor': '#FFC107', 'tertiaryColor': '#03A9F4', 'primaryTextColor': '#fff'}}}%%
+flowchart TB
+    subgraph MUST["🔴 MUST HAVE (MVP Core)"]
+        M1["Feature 1: Brief description"]
+        M2["Feature 2: Brief description"]
+        M3["Feature 3: Brief description"]
+    end
+
+    subgraph SHOULD["🟡 SHOULD HAVE (v1.1)"]
+        S1["Feature 4: Brief description"]
+        S2["Feature 5: Brief description"]
+    end
+
+    subgraph COULD["🔵 COULD HAVE (Nice to have)"]
+        C1["Feature 6: Brief description"]
+        C2["Feature 7: Brief description"]
+    end
+
+    subgraph WONT["⚪ WON'T HAVE (Future/Never)"]
+        W1["Feature 8: Brief description"]
+        W2["Feature 9: Brief description"]
+    end
+
+    MUST --> SHOULD
+    SHOULD --> COULD
+    COULD -.-> WONT
+
+    style MUST fill:#ff6b6b,stroke:#c92a2a
+    style SHOULD fill:#fcc419,stroke:#e67700
+    style COULD fill:#339af0,stroke:#1864ab
+    style WONT fill:#868e96,stroke:#495057
